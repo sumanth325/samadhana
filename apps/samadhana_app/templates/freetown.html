@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang ="eng">
+        <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <meta name="description" content="">
+                <meta name="author" content="">
+                <link rel="icon" href="../../../../favicon.ico">
+                <title>Samādhāna</title>
+                <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+                        <!-- Bootstrap core CSS -->
+                <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+                <!-- Custom styles for this template -->
+                <link href="jumbotron.css" rel="stylesheet">
+            <style>
+            
+            body{
+                            text-align: center;
+                            background:rgba(223, 215, 215, 0.911);
+                        }
+
+
+            .row1{
+                    display: inline-block;
+
+            }
+            body{
+                            text-align: center;
+                            background:rgba(223, 215, 215, 0.911);
+                        }
+
+            .box1 { width: 740px;
+                            height: 400px;
+                            display: inline-block;
+                            background:aquamarine;
+                            border: 1px solid black;
+                            margin: 10px;
+                            vertical-align:  top;
+                            text-align: left;
+                            }
+
+            .box2 {
+                        width: 200px;
+                        display: inline-block;
+                    }       
+                    
+
+            .box3 {
+                display: inline-block;
+            }
+            .row1 {
+                display: inline-block;
+                margin-right: 20px;
+            }
+            
+            .fa-heart{
+                        color: red;
+                        margin-top: 80px;
+                    }
+                
+            .icons {
+                    height: 399px;
+                    width: 70px;
+                    display: inline-block;
+                    color: black;
+                    border: 1px solid black;
+                    vertical-align: top;
+                    text-align: center;
+            }
+            
+            .fa-exclamation {
+
+                color:green;
+                }
+
+            .fa-comment-alt {
+
+                color: yellow;
+            }
+
+            .fa-handshake {
+
+                color: orange;
+            }
+
+            .fa-facebook-messenger {
+
+                color:indigo;
+
+            }
+
+            .fa-award {
+                color: rgb(241, 8, 241);
+            }
+            </style>
+            
+            </head>
+            <body>
+                    {% load static %}
+                    {% include 'includes/_navbar.html' %}
+                    <div class="container">
+                    {% block body %}{% endblock %}
+                    
+                      
+                          <main role="main">
+                      
+                            <!-- Main jumbotron for a primary marketing message or call to action -->
+                            <div class="jumbotron">
+                              <div class="container">
+                                <h1 class="display-3">A recovering Freetown</h1>
+                                <p>A man heads towards shelter. Thousands are burried. Years of recovery ahead.</p>
+                                
+                                <p class = 'row1'><a class="btn btn-secondary btn-lg" href="/food" role="button">Food <i class="fas fa-utensils"></i></a></p>
+                                <p class = 'row1'><a class="btn btn-secondary btn-lg" href="/shelter" role="button">Shelter <i class="fas fa-home"></i></a></p>
+                                <p class = 'row1'><a class="btn btn-secondary btn-lg" href="/organizations" role="button">Organizations <i class="fas fa-sitemap"></i></a></p>
+                                <p class = 'row1'><a class="btn btn-secondary btn-lg" href="/medical" role="button">Medical <i class="fas fa-briefcase-medical"></i></a></p>
+                                <p class = 'row1'><a class="btn btn-secondary btn-lg" href="/technology" role="button">Technology <i class="fas fa-parachute-box"></i></a></p>
+                              </div>
+                            </div>
+                      
+                            <div class="container">
+                              <!-- Example row of columns -->
+                              <div class="row">
+                                <div class="col-md-4">
+                                        <h2>Muddy Waters</h2>
+                                  
+                                        <img src="{% static 'freetownflood.jpg' %}" width="350" height="350" alt="freetownflood.jpg">
+                                      
+                                      </div>
+                                      <div class="col-md-4">
+                                        <h2>Burials</h2>
+                                        
+                                        <img src="{% static 'freetowndeaths.jpg' %}" width="350" height="350" alt="freetowndeaths.jpg">
+                                      
+                                      </div>
+                                      <div class="col-md-4">
+                                        <h2>Ground Zero</h2>
+                                        
+                                        <img src="{% static 'freetownhomes.jpg' %}" width="350" height="350" alt="freetownhomes.jpg">
+                                      
+                                      </div>
+                                    </div>
+                      
+                              <hr>
+                      
+                            </div> <!-- /container -->
+                            <div class='box1'>
+                                    <div class = 'icons'>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-heart"></i><i class="fas fa-heart"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-handshake"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-comment-alt"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-exclamation"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-amazon-pay"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-facebook-messenger"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-award"></i></a>
+                                                                                       
+    
+                                    
+                                    
+                                    </div>
+    
+    
+                            
+                                <div class='box3'>
+                                <img src="{% static 'freetownpost1.jpg' %}" width="420" height="390" alt="moon">
+                                
+                                    <p class="box2"> Although the British expert I met on the way to Lungi said he had heard too little about deforestation, I had heard quite a bit about it in the long list of ‘factors causing the mudslide’. </p>
+                                </div>
+                            </div>
+    
+    
+                            <div class='box1'>
+                                    <div class = 'icons'>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-heart"></i><i class="fas fa-heart"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-handshake"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-comment-alt"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-exclamation"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-amazon-pay"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-facebook-messenger"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-award"></i></a>
+                                    </div>
+    
+    
+                                <div class='box3'>
+                                <img src="{% static 'freetownpost2.jpg' %}" width="420" height="390" alt="moon">
+                                <p class="box2"> Aerial photo taken on Aug. 17, 2017 shows the mudslide site in Freetown, Sierra Leone. Altogether 331 bodies have been taken to the morgue by the rescue team following the devastating mudslide. </p>
+                                </div>
+                            </div>
+    
+    
+                            <div class='box1'>
+                                <div class = 'icons'>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-heart"></i><i class="fas fa-heart"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-handshake"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-comment-alt"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-exclamation"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-amazon-pay"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-facebook-messenger"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-award"></i></a>
+                                </div>
+    
+                                <div class='box3'>
+                                <img src="{% static 'freetownpost3.jpg' %}" width="420" height="390" alt="moon">
+                                <p class="box2"> Mudslides and torrential flooding killed more than 300 people in and around Sierra Leone’s capital early Monday following heavy rains, with many victims trapped in homes buried under tons of mud.</p>
+                                </div>
+                                </div>
+    
+                            <div class='box1'>
+                                <div class = 'icons'>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-heart"></i><i class="fas fa-heart"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-handshake"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-comment-alt"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-exclamation"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-amazon-pay"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-facebook-messenger"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-award"></i></a>
+                                </div>
+                                
+                                <div class='box3'>
+                                <img src="{% static 'freetownpost4.jpg' %}" width="420" height="390" alt="moon">
+                                <p class="box2"> A grave digger works on August 17, at the Waterloo Cemetery in Freetown.</p>
+                                </div>
+    
+                            </div>
+                            <div class='box1'>
+                                <div class = 'icons'>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-heart"></i><i class="fas fa-heart"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-handshake"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-comment-alt"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-exclamation"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-amazon-pay"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fab fa-facebook-messenger"></i></a>
+                                            <a class="btn btn-tertiary" href="#" role="button"><i class="fas fa-award"></i></a>
+                                    
+                                </div>
+    
+                                <div class='box3'>
+                                <img src="{% static 'freetownpost5.jpg' %}" width="420" height="390" alt="moon">
+                                <p class="box2"> Shoes left after a flash flood during the mudslide in Freetown, Sierra Leone August 18, 2017. </p>
+                                </div>
+                            </div>
+                          </main>
+                      
+                        
+                          <!-- Bootstrap core JavaScript
+                          ================================================== -->
+                          <!-- Placed at the end of the document so the pages load faster -->
+                          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                          <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+                          <script src="../../assets/js/vendor/popper.min.js"></script>
+                          <script src="../../dist/js/bootstrap.min.js"></script>
+            </body>
+        </html>

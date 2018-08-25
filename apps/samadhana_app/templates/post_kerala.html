@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+
+            width : 50%;
+            height : 900px;
+            border: 1px solid black;
+            margin: auto;
+
+        }
+        .post{
+            border : 1px solid black;
+            width: 70%;
+            min-height : 100px;
+            margin : auto;
+            text-align: center;
+        }
+
+        .comments{
+            width: 70%;
+            border : 1px solid black;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>{% load static %}
+    <div class = "container">
+
+        <div class = "post">
+
+
+            <img src="{% static "image1.jpg" %}" alt="My image" width = "80%">
+
+            <p>As Kerala struggles to recover from devastating floods, the worst in over a century, experts on Tuesday said that certain warnings and predictions had gone unheeded. People are still in relief camps and struggling to piece their lives back together. </p>
+            <div class= "comments">
+                <p>As water level has receded, people have started returning home. However, more than 13.43 lakh people are still lodged in 3,520 camps across the southern state.
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

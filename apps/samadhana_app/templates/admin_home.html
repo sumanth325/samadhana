@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css"> -->
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> -->
+               <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+                        <!-- Bootstrap core CSS -->
+                <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+                <!-- Custom styles for this template -->
+                <link href="jumbotron.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   <style>
+       .fa-times-circle{
+            margin-left: 5px;
+            color: red;
+        }
+        .fa-plus-circle{
+            color: green;
+        }
+        .container{
+
+            width : 100%;
+            height : 900px;
+            border : 1px solid black;
+        }
+
+        .add_disaster{
+            width: 30%;
+            height : 350px;
+            border : 1px solid black;
+            margin : 30px;
+            padding:10px;
+            display: inline-block;
+            vertical-align : top;
+            text-align: center;
+        }
+
+        .add_ngo{
+            width: 30%;
+            height : 350px;
+            border : 1px solid black;
+            padding: 10px;
+            display: inline-block;
+            vertical-align : top;
+            margin : 30px;
+            text-align: center;
+        }
+
+        a{
+            margin-right: 10px;
+        }
+
+        .btn {
+            margin-left: 1130px;
+        }
+        
+    </style>
+<script>
+    $(document).ready(function(){
+        $('select').formSelect();
+    });
+</script>
+
+</head>
+<body>
+        <a class="btn btn-secondary btn-lg" href="/" role="button"> <i class="fas fa-sign-out-alt"></i></a>
+    <div class = "container">
+
+            <table class="table">
+                    <thead>
+                      <tr>
+
+                        <th scope="col">Disaster</th>
+                        <th scope="col">Oraganizations</th>
+                        <!-- <th scope="col">Handle</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                            {%for d in disasters%}
+                          <tr>
+    
+                            <td>{{d.title}}, {{d.location}}<a href="/{{d.id}}/delete_cause"><i class="fas fa-times-circle"></i> </a></td>
+    
+                            <td>{% for i in d.works_for.all %}<a href="#">{{i.name}}<a href="{{i.id}}/{{d.id}}/rem_org"><i class="fas fa-times-circle"></i> </a> </a>{% endfor %} <a href = "/{{d.id}}/link_org"><i class="fas fa-plus-circle"></i></a></td>
+    
+                            <!-- <td><a href = "/{{d.id}}/link_org">(add-org)</a> <a href = "/{{d.id}}/rem_org">(remove-org)</a> <a href = "/{{d.id}}/delete_cause">(delete-Cause)</a></td> -->
+                          </tr>
+                          {% endfor %}
+    
+                        </tbody>
+                  </table>
+            <div>
+            <div class = "add_disaster">
+                <h2>Add Cause :</h2>
+                    <form action="/add_disaster" method = "post">
+                        {% csrf_token %}
+
+
+                        <label for="title">Title : </label>
+                        <input type="text" name = "title" id = "title" >
+                        <br><br>
+
+                        <label for = "location">Location : </label>
+                        <input type="text" name = "location" id = "location">
+                        <br><br>
+
+
+                        <label for="body">Body</label>
+                        <textarea id="body" name = "body"></textarea>
+                        <br><br>
+
+                        <button class="btn btn-primary btn-md" type="submit" name="action">Submit</button>
+                        
+
+                    </form>
+            </div>
+
+            <div class = "add_ngo">
+                    <h3>Add New Organization :</h3>
+                        <form action="/add_ngo" method = "post">
+                            {% csrf_token %}
+
+
+                            <label for="name">Name : </label>
+                            <input type="text" name = "name" id = "name" >
+
+                            <br><br>
+                            <label for = "description">Description : </label>
+                            <input type="text" name = "description" id = "description">
+                            <br><br>
+
+
+
+                            <br><br>
+                            <button class="btn btn-primary btn-md" type="submit" name="action">Submit</button>
+
+
+                        </form>
+                </div>
+            </div>
+    </div>
+
+</body>
+</html>
